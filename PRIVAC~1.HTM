@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SessionGuard — Privacy Policy</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f8fafc; color: #1e293b;
+      line-height: 1.7; font-size: 15px;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
+    .header { display: flex; align-items: center; gap: 14px; margin-bottom: 40px; }
+    .logo { font-size: 40px; }
+    h1 { font-size: 28px; font-weight: 800; color: #0f172a; }
+    .subtitle { font-size: 14px; color: #64748b; margin-top: 4px; }
+    h2 { font-size: 18px; font-weight: 700; color: #0f172a; margin: 32px 0 10px; }
+    p  { color: #334155; margin-bottom: 14px; }
+    ul { padding-left: 20px; color: #334155; margin-bottom: 14px; }
+    li { margin-bottom: 6px; }
+    .highlight {
+      background: #eff6ff; border-left: 4px solid #3b82f6;
+      padding: 14px 18px; border-radius: 0 8px 8px 0;
+      margin: 20px 0; color: #1e40af; font-weight: 500;
+    }
+    .updated { font-size: 12px; color: #94a3b8; margin-top: 6px; }
+    a { color: #3b82f6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: none; border-top: 1px solid #e2e8f0; margin: 32px 0; }
+    .footer { font-size: 12px; color: #94a3b8; text-align: center; margin-top: 48px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <span class="logo">🛡</span>
+      <div>
+        <h1>SessionGuard</h1>
+        <div class="subtitle">Privacy Policy</div>
+        <div class="updated">Last updated: May 2026</div>
+      </div>
+    </div>
+
+    <div class="highlight">
+      SessionGuard is fully local. It does not collect, transmit, or share any personal data with any server or third party.
+    </div>
+
+    <h2>What SessionGuard Does</h2>
+    <p>SessionGuard is a Chrome extension that keeps web application sessions alive by periodically sending requests to user-specified sites and automatically clearing stale cookies when a session expires.</p>
+
+    <h2>Data We Collect</h2>
+    <p>We collect <strong>no data whatsoever</strong>. Specifically:</p>
+    <ul>
+      <li>We do not collect browsing history</li>
+      <li>We do not collect personal information</li>
+      <li>We do not collect usage statistics or analytics</li>
+      <li>We do not collect crash reports</li>
+      <li>We do not collect any data that leaves your device</li>
+    </ul>
+
+    <h2>Local Storage Only</h2>
+    <p>SessionGuard stores the following data locally on your device using Chrome's built-in <code>chrome.storage.local</code> API:</p>
+    <ul>
+      <li>The list of URLs you choose to monitor</li>
+      <li>The name you assign to each monitored site</li>
+      <li>Session status and timestamps (last ping, last cookie clear)</li>
+      <li>Your settings (ping interval, enabled/disabled)</li>
+    </ul>
+    <p>This data never leaves your device. It is not synced to any server, not accessible to any website, and not shared with anyone.</p>
+
+    <h2>Permissions Explained</h2>
+    <ul>
+      <li><strong>cookies</strong> — Used exclusively to clear stale session cookies for sites you explicitly add to the monitoring list. SessionGuard only clears cookies for domains you have configured.</li>
+      <li><strong>storage</strong> — Used to save your monitored site list and settings locally on your device.</li>
+      <li><strong>notifications</strong> — Used to alert you when a session expires and cookies are cleared.</li>
+      <li><strong>alarms</strong> — Used to schedule periodic keep-alive pings at the interval you configure.</li>
+      <li><strong>webNavigation</strong> — Used to detect when a monitored site redirects to a login page (indicating session expiry).</li>
+      <li><strong>host_permissions (&lt;all_urls&gt;)</strong> — Required so the extension can send keep-alive pings to any site you choose to add, regardless of domain.</li>
+    </ul>
+
+    <h2>Third-Party Services</h2>
+    <p>SessionGuard uses Google's favicon service (<code>www.google.com/s2/favicons</code>) to display site icons in the popup. This is a standard public API used by many browser extensions and applications. The only information sent is the domain name of sites you add. No personal data is included.</p>
+    <p>Other than this favicon lookup, SessionGuard makes no requests to any third-party service.</p>
+
+    <h2>Keep-Alive Requests</h2>
+    <p>SessionGuard sends periodic HTTP requests to sites you explicitly add to the monitoring list. These requests use your existing browser session cookies (the same credentials your browser already uses). No additional data is included. These requests are functionally identical to you manually refreshing the page.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>SessionGuard is not directed at children under 13 and does not knowingly collect any information from children.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>If this privacy policy changes materially, we will update the "Last updated" date above and may notify users via the Chrome Web Store listing update notes.</p>
+
+    <h2>Contact</h2>
+    <p>If you have questions about this privacy policy, please open an issue on our GitHub repository or contact us through the Chrome Web Store support page.</p>
+
+    <hr>
+    <div class="footer">
+      SessionGuard is open-source and fully auditable.<br>
+      &copy; 2026 SessionGuard. All rights reserved.
+    </div>
+
+  </div>
+</body>
+</html>
